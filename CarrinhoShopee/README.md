@@ -18,4 +18,4 @@ Este projeto simula um carrinho de compras inspirado na plataforma **Shopee**. A
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/thaliaasmc/DIO/tree/main/CarrinhoShopee
