@@ -14,8 +14,7 @@ Este projeto permite que o usuário escolha, através do terminal, entre duas op
 
 - **Node.js**: A plataforma de execução do JavaScript no servidor.
 - **QRCode**: Biblioteca para gerar QR Codes.
-- **dotenv**: Para carregar as variáveis de ambiente.
-- **Inquirer**: Biblioteca para interatividade via terminal.
+- **Prompt**: Biblioteca para lidar com entradas no prompt
 
 ## Instalação
 
