@@ -3,7 +3,7 @@
 Este projeto permite que o usuário escolha, através do terminal, entre duas opções:
 
 1. **Gerar um QR Code** a partir de um link fornecido.
-2. **Gerar uma senha aleatória**, que pode ser configurada conforme preferências do usuário (comprimento, tipos de caracteres).
+2. **Gerar uma senha aleatória**, que tem suas permissões pré-definidas.
 
 ## Funcionalidades
 
