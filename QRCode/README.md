@@ -22,5 +22,4 @@ Este projeto permite que o usuário escolha, através do terminal, entre duas op
 1. **Clone o repositório**:
 
    ```bash
-   git clone <url-do-repositorio>
-   cd <nome-do-repositorio>
+   git clone https://github.com/thaliaasmc/DIO
