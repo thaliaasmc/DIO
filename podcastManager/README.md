@@ -1,4 +1,4 @@
-# YouTube Video API (TS and no FrameWork)
+# Podcast Manager (TS and no FrameWork)
 
 Este é um projeto de criação de uma API que lista vídeos do YouTube, com a possibilidade de filtrar os vídeos pelo nome. A API retorna informações sobre o vídeo, incluindo o nome do podcast, episódio, ID do vídeo e categorias. Os dados dos vídeos estão armazenados em um arquivo JSON, o que facilita a modificação e os testes.
 
