@@ -1,0 +1,196 @@
+import { PlayersModel } from "../models/player-model"
+import { StatisticsModels } from "../models/statistics-model";
+
+export const database: PlayersModel[] = [
+    {
+        id: 1,
+        name: "Kylian Mbappé",
+        club: "Paris Saint-Germain",
+        nationality: "França",
+        position: "Atacante",
+        statistics: {
+            Overall: 92,
+            Pace: 98,
+            Shooting: 90,
+            Passing: 80,
+            Dribbling: 92,
+            Defending: 40,
+            Physical: 85
+        }
+    },
+    {
+        id: 2,
+        name: "Erling Haaland",
+        club: "Manchester City",
+        nationality: "Noruega",
+        position: "Atacante",
+        statistics: {
+            Overall: 91,
+            Pace: 94,
+            Shooting: 93,
+            Passing: 78,
+            Dribbling: 85,
+            Defending: 45,
+            Physical: 90
+        }
+    },
+    {
+        id: 3,
+        name: "Kevin De Bruyne",
+        club: "Manchester City",
+        nationality: "Bélgica",
+        position: "Meio-campista",
+        statistics: {
+            Overall: 91,
+            Pace: 75,
+            Shooting: 88,
+            Passing: 94,
+            Dribbling: 87,
+            Defending: 60,
+            Physical: 80
+        }
+    },
+    {
+        id: 4,
+        name: "Vinícius Júnior",
+        club: "Real Madrid",
+        nationality: "Brasil",
+        position: "Atacante",
+        statistics: {
+            Overall: 89,
+            Pace: 96,
+            Shooting: 85,
+            Passing: 82,
+            Dribbling: 93,
+            Defending: 40,
+            Physical: 75
+        }
+    },
+    {
+        id: 5,
+        name: "Jude Bellingham",
+        club: "Real Madrid",
+        nationality: "Inglaterra",
+        position: "Meio-campista",
+        statistics: {
+            Overall: 90,
+            Pace: 82,
+            Shooting: 87,
+            Passing: 88,
+            Dribbling: 89,
+            Defending: 75,
+            Physical: 85
+        }
+    },
+    {
+        id: 6,
+        name: "Rodrygo",
+        club: "Real Madrid",
+        nationality: "Brasil",
+        position: "Atacante",
+        statistics: {
+            Overall: 87,
+            Pace: 91,
+            Shooting: 84,
+            Passing: 80,
+            Dribbling: 90,
+            Defending: 45,
+            Physical: 70
+        }
+    },
+    {
+        id: 7,
+        name: "Harry Kane",
+        club: "Bayern de Munique",
+        nationality: "Inglaterra",
+        position: "Atacante",
+        statistics: {
+            Overall: 91,
+            Pace: 78,
+            Shooting: 94,
+            Passing: 85,
+            Dribbling: 83,
+            Defending: 40,
+            Physical: 85
+        }
+    },
+    {
+        id: 8,
+        name: "Jamal Musiala",
+        club: "Bayern de Munique",
+        nationality: "Alemanha",
+        position: "Meio-campista",
+        statistics: {
+            Overall: 89,
+            Pace: 88,
+            Shooting: 82,
+            Passing: 86,
+            Dribbling: 92,
+            Defending: 60,
+            Physical: 75
+        }
+    },
+    {
+        id: 9,
+        name: "Bukayo Saka",
+        club: "Arsenal",
+        nationality: "Inglaterra",
+        position: "Atacante",
+        statistics: {
+            Overall: 88,
+            Pace: 89,
+            Shooting: 83,
+            Passing: 84,
+            Dribbling: 90,
+            Defending: 50,
+            Physical: 80
+        }
+    },
+    {
+        id: 10,
+        name: "Lautaro Martínez",
+        club: "Inter de Milão",
+        nationality: "Argentina",
+        position: "Atacante",
+        statistics: {
+            Overall: 88,
+            Pace: 87,
+            Shooting: 89,
+            Passing: 82,
+            Dribbling: 85,
+            Defending: 50,
+            Physical: 85
+        }
+    }
+];
+
+
+export const findAllPlayers = async (): Promise<PlayersModel[]> => {
+    return database
+}
+
+export const findPlayerById = async (id: number): Promise<PlayersModel | undefined> => {
+    return database.find( player => player.id === id)
+}
+
+export const insertPlayer = async (player: PlayersModel) => {
+    database.push(player)
+}
+
+export const deleteOnePlayer = async (id: number) => {
+    const index = database.findIndex(player => player.id === id)
+
+    if (index !== -1) {
+        database.splice(index, 1)
+    }
+}
+
+export const findAndModifyOnePlayer = async (id: number, statistics: StatisticsModels): Promise<PlayersModel> => {
+    const index = database.findIndex(player => player.id === id)
+
+    if (index !== -1) {
+        database[index].statistics = statistics
+    } 
+
+    return database[index]
+}
